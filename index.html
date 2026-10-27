@@ -1,0 +1,1044 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NexusAI — The Frontier of Artificial Intelligence & Global Applications</title>
+  <meta name="description" content="Explore the architecture, breakthroughs, and transformative real-world applications of Artificial Intelligence across healthcare, robotics, finance, and enterprise systems.">
+  <meta name="keywords" content="Artificial Intelligence, Machine Learning, Deep Learning, Generative AI, Computer Vision, Robotics, AI Applications">
+  <meta name="author" content="NexusAI Institute">
+  
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22%3E<text y=%2226%22 font-size=%2224%22>⚡</text></svg>">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Dynamic Neural Network Background Canvas -->
+  <canvas id="neuralCanvas"></canvas>
+
+  <!-- Ambient Glow Blobs -->
+  <div class="ambient-glow glow-1"></div>
+  <div class="ambient-glow glow-2"></div>
+  <div class="ambient-glow glow-3"></div>
+
+  <!-- Header / Navigation -->
+  <header class="site-header" id="header">
+    <div class="header-container">
+      <a href="#hero" class="brand-logo" id="brandLogo">
+        <div class="logo-symbol">
+          <span class="symbol-core"></span>
+          <span class="symbol-pulse"></span>
+        </div>
+        <div class="logo-text">
+          <span class="logo-name">Nexus<span class="accent-text">AI</span></span>
+          <span class="logo-tag">INTELLIGENCE PLATFORM</span>
+        </div>
+      </a>
+
+      <nav class="nav-menu" id="navMenu">
+        <a href="#overview" class="nav-link">What is AI</a>
+        <a href="#pillars" class="nav-link">Core Pillars</a>
+        <a href="#applications" class="nav-link">Applications</a>
+        <a href="#simulator" class="nav-link">Interactive Lab</a>
+        <a href="#pipeline" class="nav-link">Architecture</a>
+        <a href="#future" class="nav-link">Ethics & Future</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="#simulator" class="btn btn-secondary btn-sm" id="quickDemoBtn">Launch Lab</a>
+        <a href="#applications" class="btn btn-primary btn-sm" id="exploreAppBtn">
+          <span>Explore Apps</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+        </a>
+        <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- HERO SECTION -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="badge-pill">
+            <span class="badge-dot"></span>
+            <span class="badge-text">Next-Generation Artificial Intelligence & Practical Systems</span>
+          </div>
+
+          <h1 class="hero-title">
+            The Power, Architecture & <span class="gradient-text">Global Impact</span> of Modern AI
+          </h1>
+
+          <p class="hero-description">
+            From cognitive perception to autonomous robotics and precision medicine, Artificial Intelligence is transforming every frontier of human endeavor. Discover how intelligent algorithms analyze, reason, and sculpt the modern world.
+          </p>
+
+          <div class="hero-cta-group">
+            <a href="#applications" class="btn btn-primary btn-lg" id="heroExploreBtn">
+              <span>Explore 20+ Applications</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+            </a>
+            <a href="#simulator" class="btn btn-glass btn-lg" id="heroSimBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Test Interactive Simulator</span>
+            </a>
+          </div>
+
+          <div class="hero-metrics">
+            <div class="metric-card">
+              <span class="metric-num" data-target="99.4" data-suffix="%">0%</span>
+              <span class="metric-label">Diagnostic Accuracy</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-card">
+              <span class="metric-num" data-target="15.7" data-prefix="$" data-suffix="T">0</span>
+              <span class="metric-label">Projected 2030 Impact</span>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-card">
+              <span class="metric-num" data-target="82" data-suffix="%">0%</span>
+              <span class="metric-label">Global Enterprise Adoption</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="visual-frame">
+            <div class="visual-border-glow"></div>
+            <img src="assets/hero.jpg" alt="Futuristic AI Neural Nexus Core with glowing purple and cyan energy beams" class="hero-img" id="heroImage">
+            
+            <!-- Floating telemetry badges -->
+            <div class="telemetry-badge telemetry-top">
+              <div class="telemetry-icon pulse-cyan"></div>
+              <div>
+                <div class="telemetry-title">Inference Engine</div>
+                <div class="telemetry-val">Latency: <strong>4.2ms</strong> • FP8 Precision</div>
+              </div>
+            </div>
+
+            <div class="telemetry-badge telemetry-bottom">
+              <div class="telemetry-icon pulse-violet"></div>
+              <div>
+                <div class="telemetry-title">Multi-Modal Core</div>
+                <div class="telemetry-val">Vision • Language • Sensor Fusion</div>
+              </div>
+            </div>
+
+            <div class="floating-tag tag-status">
+              <span class="status-indicator"></span>
+              Neural Network Active
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 1: WHAT IS AI & THE SPECTRUM -->
+    <section class="section-block" id="overview">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">Foundations of Intelligence</div>
+          <h2 class="section-title">What is Artificial Intelligence?</h2>
+          <p class="section-subtitle">
+            Artificial Intelligence (AI) is the engineering of computational machines and algorithms capable of performing tasks that traditionally require human intellect—such as visual perception, natural language comprehension, decision-making, and autonomous learning.
+          </p>
+        </div>
+
+        <!-- 3 Waves of AI Evolution -->
+        <div class="spectrum-grid">
+          <div class="spectrum-card active" data-wave="ani">
+            <div class="card-glow-line"></div>
+            <div class="spectrum-header">
+              <span class="spectrum-phase">Current Reality</span>
+              <span class="spectrum-tag tag-present">ANI</span>
+            </div>
+            <h3 class="spectrum-title">Artificial Narrow Intelligence</h3>
+            <p class="spectrum-desc">
+              Specialized systems engineered to master singular domains with superhuman accuracy—such as chess, medical imaging, transcription, and autonomous lane keeping.
+            </p>
+            <ul class="spectrum-features">
+              <li>Domain-specific training architectures</li>
+              <li>High precision within defined parameters</li>
+              <li>Powers current LLMs, Vision & Recommendation systems</li>
+            </ul>
+            <div class="spectrum-status">
+              <span class="status-pill status-active">Active Worldwide</span>
+            </div>
+          </div>
+
+          <div class="spectrum-card" data-wave="agi">
+            <div class="card-glow-line"></div>
+            <div class="spectrum-header">
+              <span class="spectrum-phase">Emerging Frontier</span>
+              <span class="spectrum-tag tag-frontier">AGI</span>
+            </div>
+            <h3 class="spectrum-title">Artificial General Intelligence</h3>
+            <p class="spectrum-desc">
+              Hypothetical systems exhibiting cognitive flexibility equivalent to human minds across any intellectual challenge, adaptable across domains without re-training.
+            </p>
+            <ul class="spectrum-features">
+              <li>Cross-domain abstraction & causal reasoning</li>
+              <li>Autonomous planning and self-correction</li>
+              <li>Multi-modal embodied physical interaction</li>
+            </ul>
+            <div class="spectrum-status">
+              <span class="status-pill status-progress">In Active R&D</span>
+            </div>
+          </div>
+
+          <div class="spectrum-card" data-wave="asi">
+            <div class="card-glow-line"></div>
+            <div class="spectrum-header">
+              <span class="spectrum-phase">Theoretical Horizon</span>
+              <span class="spectrum-tag tag-horizon">ASI</span>
+            </div>
+            <h3 class="spectrum-title">Artificial Superintelligence</h3>
+            <p class="spectrum-desc">
+              An intellect vastly surpassing the collective cognitive abilities of human civilization in scientific creativity, wisdom, and strategic problem-solving.
+            </p>
+            <ul class="spectrum-features">
+              <li>Exponential recursive self-improvement</li>
+              <li>Solving global macro-challenges (quantum, fusion)</li>
+              <li>Requires strict safety & alignment protocols</li>
+            </ul>
+            <div class="spectrum-status">
+              <span class="status-pill status-future">Theoretical Horizon</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 2: CORE PILLARS OF AI -->
+    <section class="section-block bg-subtle" id="pillars">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">Architectural Foundations</div>
+          <h2 class="section-title">The Four Pillars of Modern AI</h2>
+          <p class="section-subtitle">
+            Modern breakthroughs do not stem from a single algorithm, but from the convergence of four foundational computational disciplines.
+          </p>
+        </div>
+
+        <div class="pillars-grid">
+          <!-- Pillar 1 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box cyan-gradient">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"/></svg>
+            </div>
+            <span class="pillar-step">01 / FOUNDATION</span>
+            <h3 class="pillar-title">Machine Learning (ML)</h3>
+            <p class="pillar-text">
+              Algorithms that discover statistical patterns in vast datasets rather than following static rule-sets. Spans Supervised, Unsupervised, and Reinforcement Learning algorithms.
+            </p>
+            <div class="pillar-tags">
+              <span>Linear Models</span>
+              <span>Random Forests</span>
+              <span>Gradient Boosting</span>
+              <span>Q-Learning</span>
+            </div>
+          </div>
+
+          <!-- Pillar 2 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box violet-gradient">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><circle cx="19" cy="5" r="2"/><circle cx="5" cy="5" r="2"/><circle cx="5" cy="19" r="2"/><circle cx="19" cy="19" r="2"/><path d="m10.5 10.5-4-4M13.5 10.5l4-4M10.5 13.5l-4 4M13.5 13.5l4 4"/></svg>
+            </div>
+            <span class="pillar-step">02 / DEEP NEURAL NETS</span>
+            <h3 class="pillar-title">Deep Learning & Transformers</h3>
+            <p class="pillar-text">
+              Multi-layered artificial neural networks inspired by biological neurons. Self-attention mechanisms enable models to capture long-range contextual relationships across millions of tokens.
+            </p>
+            <div class="pillar-tags">
+              <span>Transformers</span>
+              <span>Attention Mechanism</span>
+              <span>Diffusion Models</span>
+              <span>Backpropagation</span>
+            </div>
+          </div>
+
+          <!-- Pillar 3 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box emerald-gradient">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3-7 10-7 10 7 10 7-3 7-10 7-10-7-10-7Z"/><circle cx="12" cy="12" r="3"/></svg>
+            </div>
+            <span class="pillar-step">03 / PERCEPTION</span>
+            <h3 class="pillar-title">Computer Vision (CV)</h3>
+            <p class="pillar-text">
+              Giving computers high-level visual understanding from digital images, LIDAR, and video streams. Powers object segmentation, pose estimation, and 3D spatial world modeling.
+            </p>
+            <div class="pillar-tags">
+              <span>CNNs</span>
+              <span>ViT (Vision Transformers)</span>
+              <span>Spatial NeRFs</span>
+              <span>Semantic Segmentation</span>
+            </div>
+          </div>
+
+          <!-- Pillar 4 -->
+          <div class="pillar-card">
+            <div class="pillar-icon-box magenta-gradient">
+              <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+            </div>
+            <span class="pillar-step">04 / INTERACTION</span>
+            <h3 class="pillar-title">NLP & Generative Agents</h3>
+            <p class="pillar-text">
+              Natural Language Processing enables semantic syntax comprehension, sentiment analysis, multi-turn dialogue, and autonomous goal-seeking agents that can invoke software tools.
+            </p>
+            <div class="pillar-tags">
+              <span>Large Language Models</span>
+              <span>Agentic Workflows</span>
+              <span>RAG Pipelines</span>
+              <span>Tool Augmentation</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 3: REAL-WORLD APPLICATIONS SHOWCASE -->
+    <section class="section-block" id="applications">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">Empirical Impact</div>
+          <h2 class="section-title">Transformative Real-World Applications</h2>
+          <p class="section-subtitle">
+            Explore how artificial intelligence is actively disrupting global industries, accelerating scientific discovery, and automating complex operations.
+          </p>
+        </div>
+
+        <!-- Filter Controls -->
+        <div class="filter-tabs-wrapper">
+          <div class="filter-tabs" id="appFilterTabs">
+            <button class="filter-btn active" data-filter="all">All Domains</button>
+            <button class="filter-btn" data-filter="healthcare">Healthcare & Biotech</button>
+            <button class="filter-btn" data-filter="robotics">Robotics & Autonomous</button>
+            <button class="filter-btn" data-filter="finance">Finance & Security</button>
+            <button class="filter-btn" data-filter="creative">Creative & Media</button>
+            <button class="filter-btn" data-filter="enterprise">Enterprise & Industry</button>
+          </div>
+        </div>
+
+        <!-- Applications Grid -->
+        <div class="apps-grid" id="appsGrid">
+          <!-- App 1: Healthcare -->
+          <div class="app-card" data-category="healthcare">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-health">Healthcare</div>
+              <span class="app-accuracy">99.2% Acc.</span>
+            </div>
+            <h3 class="app-card-title">Early Oncology & Pathology Screening</h3>
+            <p class="app-card-desc">
+              Convolutional and transformer vision networks scan gigapixel histology slides and MRI scans, detecting micro-tumors years before symptomatic manifestation.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">30x</span>
+                <span class="metric-key">Faster Triage</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">-41%</span>
+                <span class="metric-key">False Negatives</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">Vision Transformers</span>
+              <span class="tech-pill">DICOM Analysis</span>
+            </div>
+          </div>
+
+          <!-- App 2: Healthcare Biotech -->
+          <div class="app-card" data-category="healthcare">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-health">Biotechnology</div>
+              <span class="app-accuracy">200M+ Folded</span>
+            </div>
+            <h3 class="app-card-title">AlphaFold & De Novo Protein Design</h3>
+            <p class="app-card-desc">
+              AI predicts 3D structural folding of every cataloged protein, compressing decades of biological wet-lab trial into minutes to synthesize custom enzymes and targeted drugs.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">100x</span>
+                <span class="metric-key">R&D Acceleration</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">Atomic</span>
+                <span class="metric-key">Resolution</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">Equivariant GNNs</span>
+              <span class="tech-pill">Generative Biology</span>
+            </div>
+          </div>
+
+          <!-- App 3: Robotics & Autonomous -->
+          <div class="app-card" data-category="robotics">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-robotics">Autonomous Systems</div>
+              <span class="app-accuracy">Level 4 AV</span>
+            </div>
+            <h3 class="app-card-title">Autonomous Vehicle Perception & Routing</h3>
+            <p class="app-card-desc">
+              Sensor fusion pipelines combine radar, lidar, and 360-degree cameras with predictive trajectory transformers, enabling collision-free self-navigation in complex urban traffic.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">&lt;5ms</span>
+                <span class="metric-key">Reaction Time</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">99.999%</span>
+                <span class="metric-key">Safety Reliability</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">Occupancy Networks</span>
+              <span class="tech-pill">Kalman Filters</span>
+            </div>
+          </div>
+
+          <!-- App 4: Robotics & Factory -->
+          <div class="app-card" data-category="robotics">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-robotics">Industrial Robotics</div>
+              <span class="app-accuracy">Sub-millimeter</span>
+            </div>
+            <h3 class="app-card-title">Humanoid Dexterity & Swarm Warehousing</h3>
+            <p class="app-card-desc">
+              Reinforcement learning with physics-based sim-to-real domain randomization allows humanoid robots to grasp unstructured items, pack shipments, and collaborate with humans.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">24 / 7</span>
+                <span class="metric-key">Uptime</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">350%</span>
+                <span class="metric-key">Throughput Boost</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">PPO Reinforcement</span>
+              <span class="tech-pill">Spatial AI</span>
+            </div>
+          </div>
+
+          <!-- App 5: Finance -->
+          <div class="app-card" data-category="finance">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-finance">FinTech</div>
+              <span class="app-accuracy">Real-Time</span>
+            </div>
+            <h3 class="app-card-title">Autonomous Anti-Fraud & Risk Defense</h3>
+            <p class="app-card-desc">
+              Graph Neural Networks inspect billions of global transactions simultaneously, spotting distributed laundering patterns, credential stuffing, and synthetic identity fraud.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">$42B+</span>
+                <span class="metric-key">Fraud Blocked</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">0.02s</span>
+                <span class="metric-key">Decision Window</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">Graph Neural Nets</span>
+              <span class="tech-pill">Anomaly Isolation</span>
+            </div>
+          </div>
+
+          <!-- App 6: Finance -->
+          <div class="app-card" data-category="finance">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-finance">Quantitative Trading</div>
+              <span class="app-accuracy">Microsecond</span>
+            </div>
+            <h3 class="app-card-title">High-Frequency Market Intelligence</h3>
+            <p class="app-card-desc">
+              Multimodal sentiment extractors ingest worldwide newsfeeds, earnings audio, and satellite freight data to recalibrate portfolio exposures within microseconds.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">100k+</span>
+                <span class="metric-key">Signals / Sec</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">99.9%</span>
+                <span class="metric-key">Execution Fill</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">Time-Series LSTM</span>
+              <span class="tech-pill">Multi-Agent Simulation</span>
+            </div>
+          </div>
+
+          <!-- App 7: Creative -->
+          <div class="app-card" data-category="creative">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-creative">Generative Media</div>
+              <span class="app-accuracy">4K 60FPS</span>
+            </div>
+            <h3 class="app-card-title">Multimodal Diffusion & Video Synthesis</h3>
+            <p class="app-card-desc">
+              Latent diffusion architectures generate photorealistic imagery, cinematic 3D environments, and multilingual voice cloning with hyper-accurate emotional cadence.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">80%</span>
+                <span class="metric-key">Cost Reduction</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">Instant</span>
+                <span class="metric-key">Prototyping</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">Stable Diffusion</span>
+              <span class="tech-pill">Flow Matching</span>
+            </div>
+          </div>
+
+          <!-- App 8: Enterprise -->
+          <div class="app-card" data-category="enterprise">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-enterprise">Enterprise Agents</div>
+              <span class="app-accuracy">Autonomous</span>
+            </div>
+            <h3 class="app-card-title">Cognitive Code Synthesis & DevOps Self-Healing</h3>
+            <p class="app-card-desc">
+              Autonomous coding agents read repositories, generate unit test matrices, detect zero-day vulnerabilities, and automatically patch failing production infrastructure.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">55%</span>
+                <span class="metric-key">Faster Coding</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">0-Downtime</span>
+                <span class="metric-key">Self-Healing</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">AST Reasoning</span>
+              <span class="tech-pill">ReAct Agents</span>
+            </div>
+          </div>
+
+          <!-- App 9: Enterprise / Climate -->
+          <div class="app-card" data-category="enterprise">
+            <div class="app-card-top">
+              <div class="app-category-badge badge-enterprise">Climate & Agri</div>
+              <span class="app-accuracy">Precision GPS</span>
+            </div>
+            <h3 class="app-card-title">Satellite Hyper-Spectral Smart Agriculture</h3>
+            <p class="app-card-desc">
+              Satellites with onboard AI analyze soil moisture, nitrogen levels, and pest infestations at 10cm accuracy, targeting automated drone sprayers and slashing chemical waste by 70%.
+            </p>
+            <div class="app-metric-row">
+              <div class="app-metric">
+                <span class="metric-val">-70%</span>
+                <span class="metric-key">Pesticide Use</span>
+              </div>
+              <div class="app-metric">
+                <span class="metric-val">+28%</span>
+                <span class="metric-key">Crop Yield</span>
+              </div>
+            </div>
+            <div class="app-footer">
+              <span class="tech-pill">Hyperspectral CV</span>
+              <span class="tech-pill">Climate ML</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Featured Visual Banner -->
+        <div class="apps-visual-banner">
+          <div class="banner-content">
+            <span class="banner-tag">UNIFIED CAPABILITY MATRIX</span>
+            <h3 class="banner-heading">AI Is Transforming Cross-Disciplinary Intelligence</h3>
+            <p class="banner-p">
+              The real power of modern AI manifests when vision, language, sensor telemetry, and physical actuation merge into cohesive autonomous intelligence networks.
+            </p>
+            <div class="banner-stats">
+              <div class="b-stat"><strong>99.7%</strong> <span>Precision Rate</span></div>
+              <div class="b-stat"><strong>24/7</strong> <span>Real-Time Operation</span></div>
+              <div class="b-stat"><strong>Zero</strong> <span>Human Fatigue</span></div>
+            </div>
+          </div>
+          <div class="banner-media">
+            <img src="assets/apps_preview.jpg" alt="AI Multi-Modal Intelligence Dashboard featuring robotic assistance, medical diagnostic scan, and predictive neural network analytics" class="banner-img">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 4: INTERACTIVE AI SIMULATOR LAB -->
+    <section class="section-block bg-subtle" id="simulator">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">Hands-On Experience</div>
+          <h2 class="section-title">Interactive AI Laboratory</h2>
+          <p class="section-subtitle">
+            Experience how modern neural engines interpret prompts, balance temperature parameters, and generate structured reasoning in real time.
+          </p>
+        </div>
+
+        <div class="simulator-wrapper">
+          <div class="simulator-panel-left">
+            <div class="panel-header">
+              <div class="panel-title">
+                <span class="dot-indicator"></span>
+                <span>Select AI Task Benchmark</span>
+              </div>
+            </div>
+
+            <!-- Task Presets -->
+            <div class="task-presets">
+              <button class="preset-btn active" data-task="med">
+                <span class="preset-icon">🩺</span>
+                <div class="preset-info">
+                  <strong>Medical Diagnostic Reasoning</strong>
+                  <small>Multimodal MRI & Pathology Inference</small>
+                </div>
+              </button>
+
+              <button class="preset-btn" data-task="auto">
+                <span class="preset-icon">🚗</span>
+                <div class="preset-info">
+                  <strong>Autonomous Vehicle Trajectory</strong>
+                  <small>LIDAR Spatial Collision Avoidance</small>
+                </div>
+              </button>
+
+              <button class="preset-btn" data-task="fin">
+                <span class="preset-icon">🛡️</span>
+                <div class="preset-info">
+                  <strong>Financial Fraud Detection</strong>
+                  <small>High-Velocity GNN Graph Anomaly</small>
+                </div>
+              </button>
+
+              <button class="preset-btn" data-task="code">
+                <span class="preset-icon">⚡</span>
+                <div class="preset-info">
+                  <strong>Autonomous Code Architect</strong>
+                  <small>Distributed Microservice Refactoring</small>
+                </div>
+              </button>
+            </div>
+
+            <!-- Interactive Parameters -->
+            <div class="sim-controls">
+              <div class="control-row">
+                <div class="control-label">
+                  <span>Temperature (Creativity vs Determinism)</span>
+                  <span id="tempValue" class="control-val">0.20</span>
+                </div>
+                <input type="range" id="tempSlider" min="0.0" max="1.0" step="0.05" value="0.20" class="sim-slider">
+              </div>
+
+              <div class="control-row">
+                <div class="control-label">
+                  <span>Context Window Depth</span>
+                  <span id="tokensValue" class="control-val">32k tokens</span>
+                </div>
+                <input type="range" id="tokensSlider" min="4" max="128" step="4" value="32" class="sim-slider">
+              </div>
+            </div>
+
+            <button class="btn btn-primary btn-block" id="runSimulationBtn">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              <span>Execute Neural Inference</span>
+            </button>
+          </div>
+
+          <!-- Simulator Output Display -->
+          <div class="simulator-panel-right">
+            <div class="terminal-bar">
+              <div class="terminal-dots">
+                <span class="t-dot dot-red"></span>
+                <span class="t-dot dot-yellow"></span>
+                <span class="t-dot dot-green"></span>
+              </div>
+              <div class="terminal-status" id="simStatus">ENGINE READY • STANDBY</div>
+              <div class="terminal-meta" id="simLatency">LATENCY: 0.0ms</div>
+            </div>
+
+            <div class="terminal-body" id="terminalOutput">
+              <div class="terminal-welcome">
+                <p class="t-dim">// NexusAI Neural Execution Engine v4.8</p>
+                <p class="t-dim">// Press "Execute Neural Inference" or pick a benchmark above to stream real-time computation.</p>
+                <p class="t-highlight">&gt; Ready for inference payload...</p>
+              </div>
+            </div>
+
+            <!-- Live Confidence Meter -->
+            <div class="sim-metrics-footer">
+              <div class="sim-meter">
+                <div class="meter-label">
+                  <span>Model Confidence</span>
+                  <span id="confidenceVal">98.4%</span>
+                </div>
+                <div class="meter-bar">
+                  <div class="meter-fill" id="confidenceBar" style="width: 98.4%;"></div>
+                </div>
+              </div>
+
+              <div class="sim-meter">
+                <div class="meter-label">
+                  <span>Safety / Alignment Check</span>
+                  <span id="safetyVal">Passed (100%)</span>
+                </div>
+                <div class="meter-bar">
+                  <div class="meter-fill meter-green" id="safetyBar" style="width: 100%;"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 5: HOW AI WORKS / THE PIPELINE -->
+    <section class="section-block" id="pipeline">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">Under the Hood</div>
+          <h2 class="section-title">The Modern AI Lifecycle Pipeline</h2>
+          <p class="section-subtitle">
+            From raw multimodal telemetry to intelligent reasoning: trace the five fundamental stages that bring neural networks to life.
+          </p>
+        </div>
+
+        <div class="pipeline-stepper">
+          <!-- Step 1 -->
+          <div class="pipeline-step">
+            <div class="step-num">01</div>
+            <div class="step-card">
+              <div class="step-icon">📊</div>
+              <h3 class="step-title">Data Ingestion & Tokenization</h3>
+              <p class="step-desc">
+                High-volume multimodal datasets (text, images, sensor logs) are sanitized, deduplicated, and converted into mathematical vector embeddings in high-dimensional latent space.
+              </p>
+              <div class="step-pill">BPE Tokenizer • Word2Vec • CLIP</div>
+            </div>
+          </div>
+
+          <!-- Step 2 -->
+          <div class="pipeline-step">
+            <div class="step-num">02</div>
+            <div class="step-card">
+              <div class="step-icon">⚡</div>
+              <h3 class="step-title">Unsupervised Pre-Training</h3>
+              <p class="step-desc">
+                Massive GPU clusters train neural layers over trillions of tokens using self-attention. The model learns grammar, factual logic, physical intuition, and world representations.
+              </p>
+              <div class="step-pill">Multi-Head Attention • FP8 Clusters</div>
+            </div>
+          </div>
+
+          <!-- Step 3 -->
+          <div class="pipeline-step">
+            <div class="step-num">03</div>
+            <div class="step-card">
+              <div class="step-icon">🎯</div>
+              <h3 class="step-title">Instruction Tuning & Alignment</h3>
+              <p class="step-desc">
+                Raw probability models are aligned via Supervised Fine-Tuning (SFT) and Reinforcement Learning from Human Feedback (RLHF / DPO) to follow instructions safely and avoid hallucinations.
+              </p>
+              <div class="step-pill">SFT • RLHF • DPO • Constitutional AI</div>
+            </div>
+          </div>
+
+          <!-- Step 4 -->
+          <div class="pipeline-step">
+            <div class="step-num">04</div>
+            <div class="step-card">
+              <div class="step-icon">🧠</div>
+              <h3 class="step-title">RAG & Agentic Tool Use</h3>
+              <p class="step-desc">
+                To guarantee zero staleness, the model connects to external vector databases (Retrieval-Augmented Generation), search engines, APIs, calculators, and sandboxed python runtimes.
+              </p>
+              <div class="step-pill">Vector DBs • Hybrid Search • ReAct Loop</div>
+            </div>
+          </div>
+
+          <!-- Step 5 -->
+          <div class="pipeline-step">
+            <div class="step-num">05</div>
+            <div class="step-card">
+              <div class="step-icon">🚀</div>
+              <h3 class="step-title">Quantization & Inference</h3>
+              <p class="step-desc">
+                Models are compressed via INT4/INT8 quantization and served on specialized edge NPUs and cloud clusters with KV caching for sub-10 millisecond token generation.
+              </p>
+              <div class="step-pill">vLLM • TensorRT-LLM • Edge NPUs</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 6: ETHICS, SAFETY & THE FUTURE -->
+    <section class="section-block bg-subtle" id="future">
+      <div class="container">
+        <div class="section-header text-center">
+          <div class="sub-badge">Governance & Tomorrow</div>
+          <h2 class="section-title">Ethical AI, Safety & The Horizon</h2>
+          <p class="section-subtitle">
+            As autonomous systems assume higher stakes, balancing computational power with ethical guardrails and safety verification is the paramount imperative of our era.
+          </p>
+        </div>
+
+        <div class="ethics-grid">
+          <div class="ethics-card">
+            <div class="ethics-icon">⚖️</div>
+            <h3 class="ethics-title">Algorithmic Fairness & Bias Mitigation</h3>
+            <p class="ethics-desc">
+              Rigorous adversarial red-teaming and dataset de-biasing prevent historical societal disparities from propagating into loan underwriting, hiring, and criminal justice algorithms.
+            </p>
+          </div>
+
+          <div class="ethics-card">
+            <div class="ethics-icon">🔍</div>
+            <h3 class="ethics-title">Explainability & Mechanistic Interpretability</h3>
+            <p class="ethics-desc">
+              Moving beyond "black box" models through feature visualization and circuit tracing, enabling human clinicians and auditors to verify the causal trail behind every AI inference.
+            </p>
+          </div>
+
+          <div class="ethics-card">
+            <div class="ethics-icon">🌱</div>
+            <h3 class="ethics-title">Green AI & Energy Efficiency</h3>
+            <p class="ethics-desc">
+              Pioneering neuromorphic silicon, 1-bit quantization, and datacenter geothermal cooling to reduce computational carbon footprints by over 80% while boosting throughput.
+            </p>
+          </div>
+
+          <div class="ethics-card">
+            <div class="ethics-icon">🛡️</div>
+            <h3 class="ethics-title">Autonomous Safety & Human-in-the-Loop</h3>
+            <p class="ethics-desc">
+              Establishing mathematical verification gates where critical kinetic actions—in defense, surgery, and electrical grids—require mandatory cryptographic human authorization.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 7: INTERACTIVE QUIZ & FAQ -->
+    <section class="section-block" id="quiz-faq">
+      <div class="container">
+        <div class="quiz-faq-grid">
+          <!-- Interactive Quiz -->
+          <div class="quiz-box">
+            <div class="quiz-header">
+              <span class="sub-badge">Knowledge Check</span>
+              <h3 class="quiz-title">Test Your AI Acumen</h3>
+              <p class="quiz-subtitle">Answer 3 rapid questions to assess your understanding of modern AI.</p>
+            </div>
+
+            <div id="quizContainer">
+              <div class="quiz-card" id="quizCard">
+                <div class="quiz-progress-bar">
+                  <div class="quiz-fill" id="quizProgress" style="width: 33.3%;"></div>
+                </div>
+                <div class="quiz-step-label" id="quizStep">QUESTION 1 OF 3</div>
+                <div class="quiz-question" id="quizQuestion">
+                  What is the primary breakthrough mechanism behind modern Transformer models?
+                </div>
+                <div class="quiz-options" id="quizOptions">
+                  <!-- Injected via JavaScript -->
+                </div>
+                <div class="quiz-feedback" id="quizFeedback"></div>
+              </div>
+            </div>
+
+            <div class="quiz-score-card hidden" id="quizScoreCard">
+              <div class="score-trophy">🏆</div>
+              <h4 class="score-title">Challenge Complete!</h4>
+              <p class="score-summary" id="scoreSummary">You scored 3 out of 3!</p>
+              <button class="btn btn-primary btn-sm" id="restartQuizBtn">Retake Quiz</button>
+            </div>
+          </div>
+
+          <!-- FAQ Accordion -->
+          <div class="faq-box">
+            <div class="faq-header">
+              <span class="sub-badge">Common Inquiries</span>
+              <h3 class="faq-title">Frequently Asked Questions</h3>
+            </div>
+
+            <div class="accordion" id="faqAccordion">
+              <!-- Item 1 -->
+              <div class="accordion-item active">
+                <button class="accordion-trigger">
+                  <span>What is the real difference between AI, Machine Learning, and Deep Learning?</span>
+                  <span class="acc-chevron"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                    <strong>Artificial Intelligence (AI)</strong> is the broad umbrella discipline of building intelligent machines. <strong>Machine Learning (ML)</strong> is a subset where algorithms learn from data without explicit rules. <strong>Deep Learning (DL)</strong> is a specialized subset of ML utilizing multi-layered artificial neural networks (Transformers, CNNs) capable of unsupervised feature representation.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 2 -->
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  <span>Will AI replace human professionals or augment them?</span>
+                  <span class="acc-chevron"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                    Historically, transformative general-purpose technologies (electricity, computing, the internet) automate routine tasks while shifting human labor toward high-order strategic synthesis, domain oversight, and creative orchestration. The greatest near-term advantage belongs to professionals who leverage AI copilots over those who do not.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 3 -->
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  <span>What causes "hallucinations" in Large Language Models?</span>
+                  <span class="acc-chevron"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                    Language models are probabilistic statistical predictors optimized to produce the next most plausible token given context, rather than explicit factual lookups. Hallucinations are actively reduced through Retrieval-Augmented Generation (RAG), citation grounding, and verifiable tool invocation.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Item 4 -->
+              <div class="accordion-item">
+                <button class="accordion-trigger">
+                  <span>How can enterprises begin adopting AI practically today?</span>
+                  <span class="acc-chevron"></span>
+                </button>
+                <div class="accordion-content">
+                  <p>
+                    Leading organizations begin by identifying high-frequency repetitive workflows with existing structured data (such as customer ticket triage, code documentation, and document summarization) using secure API-based foundation models with strict enterprise data privacy boundaries.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SECTION 8: NEWSLETTER & ENGAGEMENT CTA -->
+    <section class="cta-section">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-content">
+            <span class="sub-badge">Stay Ahead of the Curve</span>
+            <h2 class="cta-heading">Join the Global AI Frontier</h2>
+            <p class="cta-sub">
+              Receive weekly executive briefings covering technical breakthroughs, enterprise deployment case studies, and regulatory updates in artificial intelligence.
+            </p>
+            <form class="cta-form" id="newsletterForm">
+              <input type="email" id="emailInput" placeholder="Enter your work email address..." required class="cta-input">
+              <button type="submit" class="btn btn-primary" id="subscribeBtn">
+                <span>Subscribe Free</span>
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+              </button>
+            </form>
+            <div class="form-feedback hidden" id="formFeedback">
+              ✓ Success! You're now subscribed to the NexusAI Frontier briefing.
+            </div>
+            <div class="cta-privacy">No spam. One-click unsubscribe at any time. Built for engineers & researchers.</div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-brand">
+          <div class="brand-logo">
+            <div class="logo-symbol">
+              <span class="symbol-core"></span>
+            </div>
+            <span class="logo-name">Nexus<span class="accent-text">AI</span></span>
+          </div>
+          <p class="footer-bio">
+            An open educational and research initiative exploring the transformative power, engineering architectures, and societal applications of Artificial Intelligence.
+          </p>
+          <div class="system-status-indicator">
+            <span class="status-live-beacon"></span>
+            <span>All Global AI Observability Nodes Nominal</span>
+          </div>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="col-title">Core Concepts</h4>
+          <ul>
+            <li><a href="#overview">Artificial Narrow Intelligence</a></li>
+            <li><a href="#overview">General Intelligence (AGI)</a></li>
+            <li><a href="#pillars">Deep Learning & Transformers</a></li>
+            <li><a href="#pipeline">Latent Vector Spaces</a></li>
+            <li><a href="#pipeline">RAG & Agentic Tool Use</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="col-title">Applications</h4>
+          <ul>
+            <li><a href="#applications">Healthcare & Pathology</a></li>
+            <li><a href="#applications">Autonomous Transport</a></li>
+            <li><a href="#applications">High-Velocity FinTech</a></li>
+            <li><a href="#applications">Precision Agriculture</a></li>
+            <li><a href="#applications">DevOps Self-Healing</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-links-col">
+          <h4 class="col-title">Ethics & Safety</h4>
+          <ul>
+            <li><a href="#future">Algorithmic Alignment</a></li>
+            <li><a href="#future">Mechanistic Interpretability</a></li>
+            <li><a href="#future">Energy-Efficient Silicon</a></li>
+            <li><a href="#quiz-faq">Frequently Asked Questions</a></li>
+            <li><a href="#simulator">Interactive Neural Lab</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 NexusAI Educational Platform. Designed for modern interactive web intelligence.</p>
+        <div class="footer-socials">
+          <a href="#hero" class="back-to-top" id="backToTop" aria-label="Back to top">
+            <span>Back to top</span>
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M18 15l-6-6-6 6"/></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Scripts -->
+  <script src="script.js"></script>
+</body>
+</html>
